@@ -1,22 +1,14 @@
 import React from "react";
 import { StyleSheet, View, Text } from "react-native-web";
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import { Button } from '@react-navigation/elements';
 
-const Welcome = ({ route , navigation}) => {
+const QyshDush = ({ route }) => {
     const { username } = route.params || {};  // Ensure `route` is destructured
-    const handleB = ()=>{
-        
-    }
     return (
         <View style={styles.container}>  {/* Use `View` instead of `view` */}
             <Text style={styles.title}>
                 Welcome{username ? `, ${username}` : ""}
             </Text>
-            <Text>This is the second screen where ......</Text>
-            <Button title="Preke" onPress={() => navigation.navigate("Products")} />
-
+            <Text>This is the third screen where ......</Text>
         </View>
     );
 };
@@ -35,4 +27,4 @@ const styles = StyleSheet.create({  // Correct the spelling of `StyleSheet`
     },
 });
 
-export default Welcome;
+export default QyshDush;
